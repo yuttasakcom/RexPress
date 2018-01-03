@@ -1,0 +1,11 @@
+node_modules
+coverage
+.coveralls.yml
+.env
+public
+build
+reverse-proxy
+package-lock.json
+Dockerfile
+docker-compose.yml
+.git

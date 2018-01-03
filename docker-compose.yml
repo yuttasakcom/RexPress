@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+
+  proxy:
+    build: ./reverse-proxy
+    container_name: proxy
+    networks:
+      - proxy
+    ports:
+      - "80:80"
+    restart: always
+
+  rexpress:
+    build: .
+    container_name: rexpress
+    volumes:
+      - .:/opt/app
+    environment:
+      - PORT=80
+      - NODE_ENV=production
+    networks:
+      - proxy
+    restart: always
+
+networks:
+  proxy:
+    driver: bridge
