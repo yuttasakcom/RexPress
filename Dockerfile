@@ -10,4 +10,4 @@ ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . /opt/app
 
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "start" ]
