@@ -16,17 +16,12 @@ services:
     container_name: rexpress
     volumes:
       - .:/opt/app
-      - notused:/opt/app/build
-      - notused:/opt/app/public
     environment:
       - PORT=80
       - NODE_ENV=production
     networks:
       - proxy
     restart: always
-
-volumes:
-  notused:
 
 networks:
   proxy:
