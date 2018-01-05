@@ -6,6 +6,7 @@ import Routes from './routes'
 
 import 'font-awesome/scss/font-awesome.scss'
 import 'bootstrap/scss/bootstrap.scss'
+import 'react-progress-2/main.css'
 import './styles/styles.scss'
 
 ReactDOM.hydrate(

@@ -206,19 +206,19 @@ var _Home = __webpack_require__(9);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Login = __webpack_require__(10);
+var _Login = __webpack_require__(11);
 
 var _Login2 = _interopRequireDefault(_Login);
 
-var _About = __webpack_require__(11);
+var _About = __webpack_require__(12);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Service = __webpack_require__(12);
+var _Service = __webpack_require__(13);
 
 var _Service2 = _interopRequireDefault(_Service);
 
-var _Contact = __webpack_require__(13);
+var _Contact = __webpack_require__(14);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -379,254 +379,300 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactProgress = __webpack_require__(10);
+
+var _reactProgress2 = _interopRequireDefault(_reactProgress);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home() {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "div",
-      { className: "container" },
-      _react2.default.createElement(
-        "div",
-        { className: "row" },
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Home = function (_Component) {
+  _inherits(Home, _Component);
+
+  function Home() {
+    _classCallCheck(this, Home);
+
+    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+  }
+
+  _createClass(Home, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _reactProgress2.default.show();
+      setTimeout(function () {
+        _reactProgress2.default.hide();
+      }, 2000);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
         _react2.default.createElement(
-          "div",
-          { className: "col-md-8" },
+          'div',
+          { className: 'layout' },
+          _react2.default.createElement(_reactProgress2.default.Component, null)
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
           _react2.default.createElement(
-            "h1",
-            { className: "my-4" },
-            "Page Heading",
+            'div',
+            { className: 'row' },
             _react2.default.createElement(
-              "small",
-              null,
-              "Secondary Text"
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "card mb-4" },
-            _react2.default.createElement("img", {
-              className: "card-img-top",
-              src: "http://placehold.it/750x300",
-              alt: "Card image cap"
-            }),
-            _react2.default.createElement(
-              "div",
-              { className: "card-body" },
+              'div',
+              { className: 'col-md-8' },
               _react2.default.createElement(
-                "h2",
-                { className: "card-title" },
-                "Post Title"
+                'h1',
+                { className: 'my-4' },
+                'Page Heading',
+                _react2.default.createElement(
+                  'small',
+                  null,
+                  'Secondary Text'
+                )
               ),
               _react2.default.createElement(
-                "p",
-                { className: "card-text" },
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
+                'div',
+                { className: 'card mb-4' },
+                _react2.default.createElement('img', {
+                  className: 'card-img-top',
+                  src: 'http://placehold.it/750x300',
+                  alt: 'Card image cap'
+                }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'card-body' },
+                  _react2.default.createElement(
+                    'h2',
+                    { className: 'card-title' },
+                    'Post Title'
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    { className: 'card-text' },
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!'
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#', className: 'btn btn-primary' },
+                    'Read More \u2192'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'card-footer text-muted' },
+                  'Posted on January 1, 2017 by',
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#' },
+                    'Start Bootstrap'
+                  )
+                )
               ),
               _react2.default.createElement(
-                "a",
-                { href: "#", className: "btn btn-primary" },
-                "Read More \u2192"
+                'ul',
+                { className: 'pagination justify-content-center mb-4' },
+                _react2.default.createElement(
+                  'li',
+                  { className: 'page-item' },
+                  _react2.default.createElement(
+                    'a',
+                    { className: 'page-link', href: '#' },
+                    '\u2190 Older'
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  { className: 'page-item disabled' },
+                  _react2.default.createElement(
+                    'a',
+                    { className: 'page-link', href: '#' },
+                    'Newer \u2192'
+                  )
+                )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "card-footer text-muted" },
-              "Posted on January 1, 2017 by",
+              'div',
+              { className: 'col-md-4' },
               _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Start Bootstrap"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "ul",
-            { className: "pagination justify-content-center mb-4" },
-            _react2.default.createElement(
-              "li",
-              { className: "page-item" },
+                'div',
+                { className: 'card my-4' },
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'card-header' },
+                  'Search'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'card-body' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'input-group' },
+                    _react2.default.createElement('input', {
+                      type: 'text',
+                      className: 'form-control',
+                      placeholder: 'Search for...'
+                    }),
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'input-group-btn' },
+                      _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-secondary', type: 'button' },
+                        'Go!'
+                      )
+                    )
+                  )
+                )
+              ),
               _react2.default.createElement(
-                "a",
-                { className: "page-link", href: "#" },
-                "\u2190 Older"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              { className: "page-item disabled" },
+                'div',
+                { className: 'card my-4' },
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'card-header' },
+                  'Categories'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'card-body' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'row' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        'ul',
+                        { className: 'list-unstyled mb-0' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          _react2.default.createElement(
+                            'a',
+                            { href: '#' },
+                            'Web Design'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          _react2.default.createElement(
+                            'a',
+                            { href: '#' },
+                            'HTML'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          _react2.default.createElement(
+                            'a',
+                            { href: '#' },
+                            'Freebies'
+                          )
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        'ul',
+                        { className: 'list-unstyled mb-0' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          _react2.default.createElement(
+                            'a',
+                            { href: '#' },
+                            'JavaScript'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          _react2.default.createElement(
+                            'a',
+                            { href: '#' },
+                            'CSS'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          _react2.default.createElement(
+                            'a',
+                            { href: '#' },
+                            'Tutorials'
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              ),
               _react2.default.createElement(
-                "a",
-                { className: "page-link", href: "#" },
-                "Newer \u2192"
+                'div',
+                { className: 'card my-4' },
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'card-header' },
+                  'Sponser'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'card-body' },
+                  'Banner'
+                )
               )
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "col-md-4" },
+          'footer',
+          { className: 'py-5 bg-dark' },
           _react2.default.createElement(
-            "div",
-            { className: "card my-4" },
+            'div',
+            { className: 'container' },
             _react2.default.createElement(
-              "h5",
-              { className: "card-header" },
-              "Search"
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "card-body" },
-              _react2.default.createElement(
-                "div",
-                { className: "input-group" },
-                _react2.default.createElement("input", {
-                  type: "text",
-                  className: "form-control",
-                  placeholder: "Search for..."
-                }),
-                _react2.default.createElement(
-                  "span",
-                  { className: "input-group-btn" },
-                  _react2.default.createElement(
-                    "button",
-                    { className: "btn btn-secondary", type: "button" },
-                    "Go!"
-                  )
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "card my-4" },
-            _react2.default.createElement(
-              "h5",
-              { className: "card-header" },
-              "Categories"
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "card-body" },
-              _react2.default.createElement(
-                "div",
-                { className: "row" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "col-lg-6" },
-                  _react2.default.createElement(
-                    "ul",
-                    { className: "list-unstyled mb-0" },
-                    _react2.default.createElement(
-                      "li",
-                      null,
-                      _react2.default.createElement(
-                        "a",
-                        { href: "#" },
-                        "Web Design"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "li",
-                      null,
-                      _react2.default.createElement(
-                        "a",
-                        { href: "#" },
-                        "HTML"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "li",
-                      null,
-                      _react2.default.createElement(
-                        "a",
-                        { href: "#" },
-                        "Freebies"
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "col-lg-6" },
-                  _react2.default.createElement(
-                    "ul",
-                    { className: "list-unstyled mb-0" },
-                    _react2.default.createElement(
-                      "li",
-                      null,
-                      _react2.default.createElement(
-                        "a",
-                        { href: "#" },
-                        "JavaScript"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "li",
-                      null,
-                      _react2.default.createElement(
-                        "a",
-                        { href: "#" },
-                        "CSS"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "li",
-                      null,
-                      _react2.default.createElement(
-                        "a",
-                        { href: "#" },
-                        "Tutorials"
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "card my-4" },
-            _react2.default.createElement(
-              "h5",
-              { className: "card-header" },
-              "Sponser"
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "card-body" },
-              "Banner"
+              'p',
+              { className: 'm-0 text-center text-white' },
+              'Copyright \xA9 Your Website 2017'
             )
           )
         )
-      )
-    ),
-    _react2.default.createElement(
-      "footer",
-      { className: "py-5 bg-dark" },
-      _react2.default.createElement(
-        "div",
-        { className: "container" },
-        _react2.default.createElement(
-          "p",
-          { className: "m-0 text-center text-white" },
-          "Copyright \xA9 Your Website 2017"
-        )
-      )
-    )
-  );
-};
+      );
+    }
+  }]);
+
+  return Home;
+}(_react.Component);
 
 exports.default = Home;
 
 /***/ }),
 /* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-progress-2");
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -653,7 +699,7 @@ var Login = function Login() {
 exports.default = Login;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -680,7 +726,7 @@ var About = function About() {
 exports.default = About;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -707,7 +753,7 @@ var Service = function Service() {
 exports.default = Service;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
