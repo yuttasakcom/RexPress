@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => (
   <header>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <NavLink to="/" className="navbar-brand">
           Rexpress
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,32 +22,48 @@ const Header = () => (
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <div className="d-lg-flex justify-content-between w-100">
             <ul className="navbar-nav">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/"
+                  exact
+                >
                   Home
-                  <span className="sr-only">(current)</span>
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/about"
+                >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/service"
+                >
                   Services
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/contact"
+                >
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
             <div>
-              <Link className="btn btn-primary" to="/login">
+              <NavLink className="btn btn-primary" to="/login">
                 <i className="fa fa-sign-in" aria-hidden="true" /> Login
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>

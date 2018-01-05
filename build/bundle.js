@@ -214,6 +214,14 @@ var _About = __webpack_require__(11);
 
 var _About2 = _interopRequireDefault(_About);
 
+var _Service = __webpack_require__(12);
+
+var _Service2 = _interopRequireDefault(_Service);
+
+var _Contact = __webpack_require__(13);
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Router = function Router() {
@@ -223,7 +231,9 @@ var Router = function Router() {
     _react2.default.createElement(_Header2.default, null),
     _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default, exact: true }),
     _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Login2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/service', component: _Service2.default }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default })
   );
 };
 
@@ -259,7 +269,7 @@ var Header = function Header() {
         'div',
         { className: 'container' },
         _react2.default.createElement(
-          _reactRouterDom.Link,
+          _reactRouterDom.NavLink,
           { to: '/', className: 'navbar-brand' },
           'Rexpress'
         ),
@@ -287,24 +297,28 @@ var Header = function Header() {
               { className: 'navbar-nav' },
               _react2.default.createElement(
                 'li',
-                { className: 'nav-item active' },
+                { className: 'nav-item' },
                 _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { className: 'nav-link', to: '/' },
-                  'Home',
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'sr-only' },
-                    '(current)'
-                  )
+                  _reactRouterDom.NavLink,
+                  {
+                    className: 'nav-link',
+                    activeclassname: 'active',
+                    to: '/',
+                    exact: true
+                  },
+                  'Home'
                 )
               ),
               _react2.default.createElement(
                 'li',
                 { className: 'nav-item' },
                 _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { className: 'nav-link', to: '/about' },
+                  _reactRouterDom.NavLink,
+                  {
+                    className: 'nav-link',
+                    activeclassname: 'active',
+                    to: '/about'
+                  },
                   'About'
                 )
               ),
@@ -312,8 +326,12 @@ var Header = function Header() {
                 'li',
                 { className: 'nav-item' },
                 _react2.default.createElement(
-                  'a',
-                  { className: 'nav-link', href: '#' },
+                  _reactRouterDom.NavLink,
+                  {
+                    className: 'nav-link',
+                    activeclassname: 'active',
+                    to: '/service'
+                  },
                   'Services'
                 )
               ),
@@ -321,8 +339,12 @@ var Header = function Header() {
                 'li',
                 { className: 'nav-item' },
                 _react2.default.createElement(
-                  'a',
-                  { className: 'nav-link', href: '#' },
+                  _reactRouterDom.NavLink,
+                  {
+                    className: 'nav-link',
+                    activeclassname: 'active',
+                    to: '/contact'
+                  },
                   'Contact'
                 )
               )
@@ -331,7 +353,7 @@ var Header = function Header() {
               'div',
               null,
               _react2.default.createElement(
-                _reactRouterDom.Link,
+                _reactRouterDom.NavLink,
                 { className: 'btn btn-primary', to: '/login' },
                 _react2.default.createElement('i', { className: 'fa fa-sign-in', 'aria-hidden': 'true' }),
                 ' Login'
@@ -656,6 +678,60 @@ var About = function About() {
 };
 
 exports.default = About;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Service = function Service() {
+  return _react2.default.createElement(
+    "div",
+    { className: "container" },
+    "Service page"
+  );
+};
+
+exports.default = Service;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Contact = function Contact() {
+  return _react2.default.createElement(
+    "div",
+    { className: "container" },
+    "Contact page"
+  );
+};
+
+exports.default = Contact;
 
 /***/ })
 /******/ ]);
