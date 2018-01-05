@@ -78,54 +78,6 @@ const Home = () => (
             </div>
           </div>
 
-          <div className="card mb-4">
-            <img
-              className="card-img-top"
-              src="http://placehold.it/750x300"
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h2 className="card-title">Post Title</h2>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a
-                laboriosam. Dicta expedita corporis animi vero voluptate
-                voluptatibus possimus, veniam magni quis!
-              </p>
-              <a href="#" className="btn btn-primary">
-                Read More &rarr;
-              </a>
-            </div>
-            <div className="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
-          </div>
-
-          <div className="card mb-4">
-            <img
-              className="card-img-top"
-              src="http://placehold.it/750x300"
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h2 className="card-title">Post Title</h2>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a
-                laboriosam. Dicta expedita corporis animi vero voluptate
-                voluptatibus possimus, veniam magni quis!
-              </p>
-              <a href="#" className="btn btn-primary">
-                Read More &rarr;
-              </a>
-            </div>
-            <div className="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
-          </div>
-
           <ul className="pagination justify-content-center mb-4">
             <li className="page-item">
               <a className="page-link" href="#">
@@ -194,11 +146,8 @@ const Home = () => (
           </div>
 
           <div className="card my-4">
-            <h5 className="card-header">Side Widget</h5>
-            <div className="card-body">
-              You can put anything you want inside of these side widgets. They
-              are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
+            <h5 className="card-header">Sponser</h5>
+            <div className="card-body">Banner</div>
           </div>
         </div>
       </div>
