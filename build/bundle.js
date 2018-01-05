@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,16 +71,22 @@ module.exports = require("react");
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-router-dom");
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _express = __webpack_require__(2);
+var _express = __webpack_require__(3);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _routes = __webpack_require__(3);
+var _routes = __webpack_require__(4);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -104,13 +110,13 @@ app.listen(app.get('port'), function () {
 });
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -120,7 +126,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _renderer = __webpack_require__(4);
+var _renderer = __webpack_require__(5);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
@@ -135,7 +141,7 @@ var router = function router(app) {
 exports.default = router;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -149,11 +155,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(5);
+var _server = __webpack_require__(6);
 
-var _reactRouterDom = __webpack_require__(7);
+var _reactRouterDom = __webpack_require__(1);
 
-var _routes = __webpack_require__(8);
+var _routes = __webpack_require__(7);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -166,17 +172,65 @@ exports.default = function (req) {
     _react2.default.createElement(_routes2.default, null)
   ));
 
-  return '\n    <!DOCTYPE html>\n    <html lang="en">\n    <head>\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width, initial-scale=1.0">\n        <meta http-equiv="X-UA-Compatible" content="ie=edge">\n        <title>Rexpress</title>\n        <link rel="stylesheet" href="/styles.css">\n    </head>\n    <body>\n        <div id="root">' + content + '</div>\n        <script src="bundle.js"></script>\n    </body>\n    </html>\n  ';
+  return '\n    <!DOCTYPE html>\n    <html lang="en">\n    <head>\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width, initial-scale=1.0">\n        <meta http-equiv="X-UA-Compatible" content="ie=edge">\n        <title>Rexpress</title>\n        <link rel=icon type=image/png href=/statics/img/favicon.png>\n        <link rel="stylesheet" href="/styles.css">\n    </head>\n    <body>\n        <div id="root">' + content + '</div>\n        <script src="bundle.js"></script>\n    </body>\n    </html>\n  ';
 };
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 6 */
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(1);
+
+var _Header = __webpack_require__(11);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Home = __webpack_require__(8);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Login = __webpack_require__(9);
+
+var _Login2 = _interopRequireDefault(_Login);
+
+var _About = __webpack_require__(10);
+
+var _About2 = _interopRequireDefault(_About);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Router = function Router() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_Header2.default, null),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default, exact: true }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Login2.default }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+  );
+};
+
+exports.default = Router;
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -196,81 +250,6 @@ var Home = function Home() {
   return _react2.default.createElement(
     "div",
     null,
-    _react2.default.createElement(
-      "nav",
-      { className: "navbar navbar-expand-lg navbar-dark bg-dark fixed-top" },
-      _react2.default.createElement(
-        "div",
-        { className: "container" },
-        _react2.default.createElement(
-          "a",
-          { className: "navbar-brand", href: "#" },
-          "Start Bootstrap"
-        ),
-        _react2.default.createElement(
-          "button",
-          {
-            className: "navbar-toggler",
-            type: "button",
-            "data-toggle": "collapse",
-            "data-target": "#navbarResponsive",
-            "aria-controls": "navbarResponsive",
-            "aria-expanded": "false",
-            "aria-label": "Toggle navigation"
-          },
-          _react2.default.createElement("span", { className: "navbar-toggler-icon" })
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "collapse navbar-collapse", id: "navbarResponsive" },
-          _react2.default.createElement(
-            "ul",
-            { className: "navbar-nav ml-auto" },
-            _react2.default.createElement(
-              "li",
-              { className: "nav-item active" },
-              _react2.default.createElement(
-                "a",
-                { className: "nav-link", href: "#" },
-                "Home",
-                _react2.default.createElement(
-                  "span",
-                  { className: "sr-only" },
-                  "(current)"
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              { className: "nav-item" },
-              _react2.default.createElement(
-                "a",
-                { className: "nav-link", href: "#" },
-                "About"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              { className: "nav-item" },
-              _react2.default.createElement(
-                "a",
-                { className: "nav-link", href: "#" },
-                "Services"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              { className: "nav-item" },
-              _react2.default.createElement(
-                "a",
-                { className: "nav-link", href: "#" },
-                "Contact"
-              )
-            )
-          )
-        )
-      )
-    ),
     _react2.default.createElement(
       "div",
       { className: "container" },
@@ -508,50 +487,6 @@ var Home = function Home() {
 exports.default = Home;
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router-dom");
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(7);
-
-var _Home = __webpack_require__(6);
-
-var _Home2 = _interopRequireDefault(_Home);
-
-var _Login = __webpack_require__(9);
-
-var _Login2 = _interopRequireDefault(_Login);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Router = function Router() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default, exact: true }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Login2.default })
-  );
-};
-
-exports.default = Router;
-
-/***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -577,6 +512,136 @@ var Login = function Login() {
 };
 
 exports.default = Login;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var About = function About() {
+  return _react2.default.createElement(
+    "div",
+    { className: "container" },
+    "About page"
+  );
+};
+
+exports.default = About;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+  return _react2.default.createElement(
+    'header',
+    null,
+    _react2.default.createElement(
+      'nav',
+      { className: 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top' },
+      _react2.default.createElement(
+        'div',
+        { className: 'container' },
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/', className: 'navbar-brand' },
+          'Rexpress'
+        ),
+        _react2.default.createElement(
+          'button',
+          {
+            className: 'navbar-toggler',
+            type: 'button',
+            'data-toggle': 'collapse',
+            'data-target': '#navbarResponsive',
+            'aria-controls': 'navbarResponsive',
+            'aria-expanded': 'false',
+            'aria-label': 'Toggle navigation'
+          },
+          _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'collapse navbar-collapse', id: 'navbarResponsive' },
+          _react2.default.createElement(
+            'ul',
+            { className: 'navbar-nav ml-auto' },
+            _react2.default.createElement(
+              'li',
+              { className: 'nav-item active' },
+              _react2.default.createElement(
+                _reactRouterDom.Link,
+                { className: 'nav-link', to: '/' },
+                'Home',
+                _react2.default.createElement(
+                  'span',
+                  { className: 'sr-only' },
+                  '(current)'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: 'nav-item' },
+              _react2.default.createElement(
+                _reactRouterDom.Link,
+                { className: 'nav-link', to: '/about' },
+                'About'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: 'nav-item' },
+              _react2.default.createElement(
+                'a',
+                { className: 'nav-link', href: '#' },
+                'Services'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: 'nav-item' },
+              _react2.default.createElement(
+                'a',
+                { className: 'nav-link', href: '#' },
+                'Contact'
+              )
+            )
+          )
+        )
+      )
+    )
+  );
+};
+
+exports.default = Header;
 
 /***/ })
 /******/ ]);

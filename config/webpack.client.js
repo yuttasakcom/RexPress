@@ -4,12 +4,20 @@ const path = require('path')
 const webpackMerge = require('webpack-merge')
 const webpackBase = require('./webpack.base')
 
+// resolve path
+const resolve = dir => path.resolve(__dirname, '..', dir)
+
 // plugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CSSExtract = new ExtractTextPlugin('styles.css')
-
-// resolve path
-const resolve = dir => path.resolve(__dirname, '..', dir)
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyStatics = new CopyWebpackPlugin([
+  {
+    from: resolve('statics'),
+    to: 'statics',
+    ignore: ['.*']
+  }
+])
 
 // webpack config
 const config = {
@@ -66,7 +74,8 @@ const config = {
         process.env.NODE_ENV || 'development'
       )
     }),
-    CSSExtract
+    CSSExtract,
+    CopyStatics
   ]
 }
 

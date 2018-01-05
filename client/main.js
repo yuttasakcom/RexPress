@@ -7,8 +7,6 @@ import Routes from './routes'
 import 'bootstrap/scss/bootstrap.scss'
 import './styles/styles.scss'
 
-import Home from './pages/Home'
-
 ReactDOM.hydrate(
   <BrowserRouter>
     <Routes />
