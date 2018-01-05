@@ -80,15 +80,9 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _server = __webpack_require__(3);
+var _routes = __webpack_require__(3);
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Home = __webpack_require__(4);
-
-var _Home2 = _interopRequireDefault(_Home);
+var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101,14 +95,12 @@ app.set('port', process.env.PORT || 3000);
 app.use(_express2.default.static('public'));
 
 // routes
-app.get('*', function (req, res) {
-    res.send('\n        <!DOCTYPE html>\n        <html lang="en">\n        <head>\n            <meta charset="UTF-8">\n            <meta name="viewport" content="width=device-width, initial-scale=1.0">\n            <meta http-equiv="X-UA-Compatible" content="ie=edge">\n            <title>Rexpress</title>\n            <link rel="stylesheet" href="/styles.css">\n        </head>\n        <body>\n            <div id="root">' + (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null)) + '</div>\n            <script src="bundle.js"></script>\n        </body>\n        </html>\n    ');
-});
+(0, _routes2.default)(app);
 
 // app listen
 app.listen(app.get('port'), function () {
-    console.log('Server running at localhost:' + app.get('port'));
-    console.log('Press CTRL-C to stop');
+  console.log('Server running at localhost:' + app.get('port'));
+  console.log('Press CTRL-C to stop');
 });
 
 /***/ }),
@@ -119,12 +111,72 @@ module.exports = require("express");
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _renderer = __webpack_require__(4);
+
+var _renderer2 = _interopRequireDefault(_renderer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var router = function router(app) {
+  app.get('*', function (req, res) {
+    res.send((0, _renderer2.default)(req));
+  });
+};
+
+exports.default = router;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _server = __webpack_require__(5);
+
+var _reactRouterDom = __webpack_require__(7);
+
+var _routes = __webpack_require__(8);
+
+var _routes2 = _interopRequireDefault(_routes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (req) {
+  var content = (0, _server.renderToString)(_react2.default.createElement(
+    _reactRouterDom.StaticRouter,
+    { location: req.path, context: {} },
+    _react2.default.createElement(_routes2.default, null)
+  ));
+
+  return '\n    <!DOCTYPE html>\n    <html lang="en">\n    <head>\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width, initial-scale=1.0">\n        <meta http-equiv="X-UA-Compatible" content="ie=edge">\n        <title>Rexpress</title>\n        <link rel="stylesheet" href="/styles.css">\n    </head>\n    <body>\n        <div id="root">' + content + '</div>\n        <script src="bundle.js"></script>\n    </body>\n    </html>\n  ';
+};
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -454,6 +506,77 @@ var Home = function Home() {
 };
 
 exports.default = Home;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-router-dom");
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(7);
+
+var _Home = __webpack_require__(6);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Login = __webpack_require__(9);
+
+var _Login2 = _interopRequireDefault(_Login);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Router = function Router() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default, exact: true }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Login2.default })
+  );
+};
+
+exports.default = Router;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Login = function Login() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    'Login page'
+  );
+};
+
+exports.default = Login;
 
 /***/ })
 /******/ ]);
