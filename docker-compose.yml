@@ -4,6 +4,7 @@ services:
 
   proxy:
     build: ./reverse-proxy
+    image: yuttasakcom/rexpress-proxy:1.13.7-alpine
     container_name: proxy
     networks:
       - proxy
@@ -13,6 +14,7 @@ services:
 
   rexpress:
     build: .
+    image: yuttasakcom/rexpress-node:9.3.0-alpine
     container_name: rexpress
     volumes:
       - .:/opt/app

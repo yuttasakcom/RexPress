@@ -22,6 +22,7 @@ app.get('*', (req, res) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Rexpress</title>
+            <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
             <div id="root">${renderToString(<Home />)}</div>
