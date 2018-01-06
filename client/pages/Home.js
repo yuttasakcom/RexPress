@@ -3,10 +3,14 @@ import { connect } from 'react-redux'
 import { fetchUsers } from '../../client/actions'
 
 class Home extends Component {
+  componentWillMount() {
+    this.props.fetchUsers()
+  }
   render() {
     return (
       <div>
-        {this.props.users}
+        store:{' '}
+        {this.props.users.map((user, i) => <span key={i}>{user.name}</span>)}
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -113,7 +117,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
         <footer className="py-5 bg-dark">
           <div className="container">
             <p className="m-0 text-center text-white">
@@ -128,4 +131,4 @@ class Home extends Component {
 
 const mapStateToProps = ({ users }) => ({ users })
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps, { fetchUsers })(Home)

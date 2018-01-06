@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
@@ -12,7 +13,9 @@ import './styles/styles.scss'
 
 import reducers from './reducers'
 
-const store = createStore(reducers, {}, applyMiddleware())
+import thunk from 'redux-thunk'
+
+const store = createStore(reducers, {}, applyMiddleware(thunk))
 
 ReactDOM.hydrate(
   <Provider store={store}>
