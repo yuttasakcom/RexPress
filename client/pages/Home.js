@@ -1,20 +1,12 @@
 import React, { Component } from 'react'
-import Progress from 'react-progress-2'
+import { connect } from 'react-redux'
+import { fetchUsers } from '../../client/actions'
 
 class Home extends Component {
-  componentDidMount() {
-    Progress.show()
-    setTimeout(() => {
-      Progress.hide()
-    }, 2000)
-  }
-
   render() {
     return (
       <div>
-        <div className="layout">
-          <Progress.Component />
-        </div>
+        {this.props.users}
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -134,4 +126,6 @@ class Home extends Component {
   }
 }
 
-export default Home
+const mapStateToProps = ({ users }) => ({ users })
+
+export default connect(mapStateToProps)(Home)
