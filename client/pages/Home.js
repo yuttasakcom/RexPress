@@ -3,6 +3,10 @@ import { connect } from 'react-redux'
 import { fetchUsers } from '../../client/actions'
 
 class Home extends Component {
+  componentWillMount() {
+    this.props.fetchUsers()
+  }
+
   render() {
     return (
       <div>
