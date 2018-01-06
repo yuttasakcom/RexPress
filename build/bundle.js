@@ -73,13 +73,13 @@ module.exports = require("react");
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-config");
+module.exports = require("react-router-dom");
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-dom");
+module.exports = require("react-router-config");
 
 /***/ }),
 /* 3 */
@@ -265,7 +265,7 @@ var _createStore = __webpack_require__(20);
 
 var _createStore2 = _interopRequireDefault(_createStore);
 
-var _reactRouterConfig = __webpack_require__(1);
+var _reactRouterConfig = __webpack_require__(2);
 
 var _routes = __webpack_require__(4);
 
@@ -308,11 +308,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _server = __webpack_require__(12);
 
-var _reactRouterDom = __webpack_require__(2);
+var _reactRouterDom = __webpack_require__(1);
 
 var _reactRedux = __webpack_require__(3);
 
-var _reactRouterConfig = __webpack_require__(1);
+var _reactRouterConfig = __webpack_require__(2);
 
 var _routes = __webpack_require__(4);
 
@@ -359,7 +359,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterConfig = __webpack_require__(1);
+var _reactRouterConfig = __webpack_require__(2);
+
+var _reactRouterDom = __webpack_require__(1);
 
 var _Header = __webpack_require__(14);
 
@@ -373,7 +375,11 @@ var App = function App(_ref) {
     'div',
     null,
     _react2.default.createElement(_Header2.default, null),
-    (0, _reactRouterConfig.renderRoutes)(route.routes)
+    _react2.default.createElement(
+      _reactRouterDom.Switch,
+      null,
+      (0, _reactRouterConfig.renderRoutes)(route.routes)
+    )
   );
 };
 
@@ -396,7 +402,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(2);
+var _reactRouterDom = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
