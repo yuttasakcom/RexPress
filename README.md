@@ -1,3 +1,2 @@
 # Rexpress
 
-## Table of Contents
