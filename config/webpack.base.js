@@ -26,6 +26,10 @@ const config = {
             { plugins: ['transform-class-properties'] }
           ]
         }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'react-vue-loader'
       }
     ]
   },

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -104,27 +104,27 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _App = __webpack_require__(13);
+var _App = __webpack_require__(14);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _Home = __webpack_require__(15);
+var _Home = __webpack_require__(16);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Login = __webpack_require__(16);
+var _Login = __webpack_require__(23);
 
 var _Login2 = _interopRequireDefault(_Login);
 
-var _About = __webpack_require__(17);
+var _About = __webpack_require__(24);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Service = __webpack_require__(18);
+var _Service = __webpack_require__(25);
 
 var _Service2 = _interopRequireDefault(_Service);
 
-var _Contact = __webpack_require__(19);
+var _Contact = __webpack_require__(26);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -196,22 +196,28 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = require("redux");
+module.exports = require("react-vue-helper");
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(8);
+__webpack_require__(9);
 
-var _express = __webpack_require__(9);
+var _express = __webpack_require__(10);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _routes = __webpack_require__(10);
+var _routes = __webpack_require__(11);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -235,19 +241,19 @@ app.listen(app.get('port'), function () {
 });
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -257,11 +263,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _renderer = __webpack_require__(11);
+var _renderer = __webpack_require__(12);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
-var _createStore = __webpack_require__(20);
+var _createStore = __webpack_require__(27);
 
 var _createStore2 = _interopRequireDefault(_createStore);
 
@@ -292,7 +298,7 @@ var router = function router(app) {
 exports.default = router;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -306,7 +312,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(12);
+var _server = __webpack_require__(13);
 
 var _reactRouterDom = __webpack_require__(1);
 
@@ -339,13 +345,13 @@ exports.default = function (req, store) {
 };
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -363,7 +369,7 @@ var _reactRouterConfig = __webpack_require__(2);
 
 var _reactRouterDom = __webpack_require__(1);
 
-var _Header = __webpack_require__(14);
+var _Header = __webpack_require__(15);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -388,7 +394,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -517,7 +523,7 @@ var Header = function Header() {
 exports.default = Header;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -537,6 +543,22 @@ var _reactRedux = __webpack_require__(3);
 
 var _actions = __webpack_require__(5);
 
+var _Posts = __webpack_require__(39);
+
+var _Posts2 = _interopRequireDefault(_Posts);
+
+var _Search = __webpack_require__(35);
+
+var _Search2 = _interopRequireDefault(_Search);
+
+var _Category = __webpack_require__(31);
+
+var _Category2 = _interopRequireDefault(_Category);
+
+var _Sponser = __webpack_require__(17);
+
+var _Sponser2 = _interopRequireDefault(_Sponser);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -544,6 +566,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// components
+
 
 var Home = function (_Component) {
   _inherits(Home, _Component);
@@ -565,14 +590,6 @@ var Home = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'store:',
-        this.props.users.map(function (user, i) {
-          return _react2.default.createElement(
-            'div',
-            { key: i },
-            user.name
-          );
-        }),
         _react2.default.createElement(
           'div',
           { className: 'container' },
@@ -582,212 +599,14 @@ var Home = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'col-md-8' },
-              _react2.default.createElement(
-                'h1',
-                { className: 'my-4' },
-                'Page Heading',
-                _react2.default.createElement(
-                  'small',
-                  null,
-                  'Secondary Text'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'card mb-4' },
-                _react2.default.createElement('img', {
-                  className: 'card-img-top',
-                  src: 'http://placehold.it/750x300',
-                  alt: 'Card image cap'
-                }),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'card-body' },
-                  _react2.default.createElement(
-                    'h2',
-                    { className: 'card-title' },
-                    'Post Title'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    { className: 'card-text' },
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!'
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#', className: 'btn btn-primary' },
-                    'Read More \u2192'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'card-footer text-muted' },
-                  'Posted on January 1, 2017 by',
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#' },
-                    'Start Bootstrap'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'ul',
-                { className: 'pagination justify-content-center mb-4' },
-                _react2.default.createElement(
-                  'li',
-                  { className: 'page-item' },
-                  _react2.default.createElement(
-                    'a',
-                    { className: 'page-link', href: '#' },
-                    '\u2190 Older'
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  { className: 'page-item disabled' },
-                  _react2.default.createElement(
-                    'a',
-                    { className: 'page-link', href: '#' },
-                    'Newer \u2192'
-                  )
-                )
-              )
+              _react2.default.createElement(_Posts2.default, null)
             ),
             _react2.default.createElement(
               'div',
               { className: 'col-md-4' },
-              _react2.default.createElement(
-                'div',
-                { className: 'card my-4' },
-                _react2.default.createElement(
-                  'h5',
-                  { className: 'card-header' },
-                  'Search'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'card-body' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'input-group' },
-                    _react2.default.createElement('input', {
-                      type: 'text',
-                      className: 'form-control',
-                      placeholder: 'Search for...'
-                    }),
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'input-group-btn' },
-                      _react2.default.createElement(
-                        'button',
-                        { className: 'btn btn-secondary', type: 'button' },
-                        'Go!'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'card my-4' },
-                _react2.default.createElement(
-                  'h5',
-                  { className: 'card-header' },
-                  'Categories'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'card-body' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'row' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'col-lg-6' },
-                      _react2.default.createElement(
-                        'ul',
-                        { className: 'list-unstyled mb-0' },
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            'Web Design'
-                          )
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            'HTML'
-                          )
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            'Freebies'
-                          )
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'col-lg-6' },
-                      _react2.default.createElement(
-                        'ul',
-                        { className: 'list-unstyled mb-0' },
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            'JavaScript'
-                          )
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            'CSS'
-                          )
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            'Tutorials'
-                          )
-                        )
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'card my-4' },
-                _react2.default.createElement(
-                  'h5',
-                  { className: 'card-header' },
-                  'Sponser'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'card-body' },
-                  'Banner'
-                )
-              )
+              _react2.default.createElement(_Search2.default, null),
+              _react2.default.createElement(_Category2.default, null),
+              _react2.default.createElement(_Sponser2.default, null)
             )
           )
         ),
@@ -825,7 +644,92 @@ exports.default = {
 };
 
 /***/ }),
-/* 16 */
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+var render = __webpack_require__(18);render = render.default || render;
+
+var options = __webpack_require__(19);options = options.default || options || {};
+
+var build = __webpack_require__(20);build = build.default || build;
+
+var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Sponser.vue"}));
+
+options.name && Object.defineProperty(Component, "name", { value: options.name });
+
+module.exports = Component;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = render;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+
+
+
+function render(vm) {
+      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
+                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
+            }, className: ("card my-4" + ' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h5', { className: "card-header".trim() }, "Sponser"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, "Banner"));
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
+
+
+
+
+
+
+
+const _Vue = null;
+/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
+  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Sponser extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
+});
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-vue");
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
+
+/***/ }),
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -852,7 +756,7 @@ var Login = function Login() {
 exports.default = { component: Login };
 
 /***/ }),
-/* 17 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -879,7 +783,7 @@ var About = function About() {
 exports.default = { component: About };
 
 /***/ }),
-/* 18 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -906,7 +810,7 @@ var Service = function Service() {
 exports.default = { component: Service };
 
 /***/ }),
-/* 19 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -933,7 +837,7 @@ var Contact = function Contact() {
 exports.default = { component: Contact };
 
 /***/ }),
-/* 20 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -943,13 +847,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(6);
+var _redux = __webpack_require__(7);
 
-var _reducers = __webpack_require__(21);
+var _reducers = __webpack_require__(28);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-var _reduxThunk = __webpack_require__(23);
+var _reduxThunk = __webpack_require__(30);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
@@ -962,7 +866,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 21 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -972,9 +876,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(6);
+var _redux = __webpack_require__(7);
 
-var _userReducer = __webpack_require__(22);
+var _userReducer = __webpack_require__(29);
 
 var _userReducer2 = _interopRequireDefault(_userReducer);
 
@@ -985,7 +889,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 22 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1010,10 +914,229 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 23 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+var render = __webpack_require__(32);render = render.default || render;
+
+var options = __webpack_require__(33);options = options.default || options || {};
+
+var build = __webpack_require__(34);build = build.default || build;
+
+var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Category.vue"}));
+
+options.name && Object.defineProperty(Component, "name", { value: options.name });
+
+module.exports = Component;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = render;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+
+
+
+function render(vm) {
+      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
+                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
+            }, className: ("card my-4" + ' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h5', { className: "card-header".trim() }, "Categories"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "row".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "col-lg-6".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "list-unstyled mb-0".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Web Design")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "HTML")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Freebies")))), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "col-lg-6".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "list-unstyled mb-0".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "JavaScript")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "CSS")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Tutorials")))))));
+}
+
+/***/ }),
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
+
+
+
+
+
+
+
+const _Vue = null;
+/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
+  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Category extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
+});
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+var render = __webpack_require__(36);render = render.default || render;
+
+var options = __webpack_require__(37);options = options.default || options || {};
+
+var build = __webpack_require__(38);build = build.default || build;
+
+var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Search.vue"}));
+
+options.name && Object.defineProperty(Component, "name", { value: options.name });
+
+module.exports = Component;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = render;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+
+
+
+function render(vm) {
+      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
+                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
+            }, className: ("card my-4" + ' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h5', { className: "card-header".trim() }, "Search"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "input-group".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('input', { 'type': "text", 'placeholder': "Search for...", className: "form-control".trim() }), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('span', { className: "input-group-btn".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('button', { 'type': "button", className: "btn btn-secondary".trim() }, "\n                    Go!\n                ")))));
+}
+
+/***/ }),
+/* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 38 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
+
+
+
+
+
+
+
+const _Vue = null;
+/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
+  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Search extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
+});
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+var render = __webpack_require__(40);render = render.default || render;
+
+var options = __webpack_require__(41);options = options.default || options || {};
+
+var build = __webpack_require__(42);build = build.default || build;
+
+var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Posts.vue"}));
+
+options.name && Object.defineProperty(Component, "name", { value: options.name });
+
+module.exports = Component;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = render;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+
+
+
+function render(vm) {
+      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
+                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
+            }, className: (' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h1', { className: "my-4".trim() }, "\n        Page Heading\n        ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('small', null, "Secondary Text")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card mb-4".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('img', { 'src': "http://placehold.it/750x300", 'alt': "Card image cap", className: "card-img-top".trim() }), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h2', { className: "card-title".trim() }, "Post Title"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('p', { className: "card-text".trim() }, "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.\n                Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!\n            "), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "btn btn-primary".trim() }, "\n                Read More →\n            ")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-footer text-muted".trim() }, "\n            Posted on January 1, 2017 by\n            ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Start Bootstrap"))), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "pagination justify-content-center mb-4".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', { className: "page-item".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "page-link".trim() }, "\n                ← Older\n            ")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', { className: "page-item disabled".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "page-link".trim() }, "\n                Newer →\n            "))));
+}
+
+/***/ }),
+/* 41 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
+
+
+
+
+
+
+
+const _Vue = null;
+/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
+  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Posts extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
+});
 
 /***/ })
 /******/ ]);
