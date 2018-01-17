@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,22 +73,40 @@ module.exports = require("react");
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-dom");
+module.exports = require("react-vue-helper");
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-config");
+module.exports = require("react-router-dom");
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-redux");
+module.exports = require("react-router-config");
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-vue");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104,27 +122,27 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _App = __webpack_require__(14);
+var _App = __webpack_require__(16);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _Home = __webpack_require__(16);
+var _Home = __webpack_require__(18);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Login = __webpack_require__(23);
+var _Login = __webpack_require__(32);
 
 var _Login2 = _interopRequireDefault(_Login);
 
-var _About = __webpack_require__(24);
+var _About = __webpack_require__(33);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Service = __webpack_require__(25);
+var _Service = __webpack_require__(34);
 
 var _Service2 = _interopRequireDefault(_Service);
 
-var _Contact = __webpack_require__(26);
+var _Contact = __webpack_require__(35);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -146,7 +164,7 @@ exports.default = [_extends({}, _App2.default, {
 })];
 
 /***/ }),
-/* 5 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -193,31 +211,25 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
 };
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-vue-helper");
-
-/***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(9);
+__webpack_require__(11);
 
-var _express = __webpack_require__(10);
+var _express = __webpack_require__(12);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _routes = __webpack_require__(11);
+var _routes = __webpack_require__(13);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -241,19 +253,19 @@ app.listen(app.get('port'), function () {
 });
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -263,17 +275,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _renderer = __webpack_require__(12);
+var _renderer = __webpack_require__(14);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
-var _createStore = __webpack_require__(27);
+var _createStore = __webpack_require__(36);
 
 var _createStore2 = _interopRequireDefault(_createStore);
 
-var _reactRouterConfig = __webpack_require__(2);
+var _reactRouterConfig = __webpack_require__(3);
 
-var _routes = __webpack_require__(4);
+var _routes = __webpack_require__(7);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -298,7 +310,7 @@ var router = function router(app) {
 exports.default = router;
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -312,15 +324,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(13);
+var _server = __webpack_require__(15);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
-var _reactRedux = __webpack_require__(3);
+var _reactRedux = __webpack_require__(6);
 
-var _reactRouterConfig = __webpack_require__(2);
+var _reactRouterConfig = __webpack_require__(3);
 
-var _routes = __webpack_require__(4);
+var _routes = __webpack_require__(7);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -345,13 +357,13 @@ exports.default = function (req, store) {
 };
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -365,11 +377,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterConfig = __webpack_require__(2);
+var _reactRouterConfig = __webpack_require__(3);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
-var _Header = __webpack_require__(15);
+var _Header = __webpack_require__(17);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -394,7 +406,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -408,7 +420,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -523,7 +535,7 @@ var Header = function Header() {
 exports.default = Header;
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -539,23 +551,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(3);
+var _reactRedux = __webpack_require__(6);
 
-var _actions = __webpack_require__(5);
+var _actions = __webpack_require__(8);
 
-var _Posts = __webpack_require__(39);
+var _Posts = __webpack_require__(19);
 
 var _Posts2 = _interopRequireDefault(_Posts);
 
-var _Search = __webpack_require__(35);
+var _Search = __webpack_require__(23);
 
 var _Search2 = _interopRequireDefault(_Search);
 
-var _Category = __webpack_require__(31);
+var _Category = __webpack_require__(24);
 
 var _Category2 = _interopRequireDefault(_Category);
 
-var _Sponser = __webpack_require__(17);
+var _Sponser = __webpack_require__(28);
 
 var _Sponser2 = _interopRequireDefault(_Sponser);
 
@@ -644,16 +656,275 @@ exports.default = {
 };
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 
-var render = __webpack_require__(18);render = render.default || render;
+var render = __webpack_require__(20);render = render.default || render;
 
-var options = __webpack_require__(19);options = options.default || options || {};
+var options = __webpack_require__(21);options = options.default || options || {};
 
-var build = __webpack_require__(20);build = build.default || build;
+var build = __webpack_require__(22);build = build.default || build;
+
+var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Posts.vue"}));
+
+options.name && Object.defineProperty(Component, "name", { value: options.name });
+
+module.exports = Component;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = render;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+
+
+
+function render(vm) {
+      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
+                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
+            }, className: (' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h1', { className: "my-4".trim() }, "\n        Page Heading\n        ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('small', null, "Secondary Text")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card mb-4".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('img', { 'src': "http://placehold.it/750x300", 'alt': "Card image cap", className: "card-img-top".trim() }), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h2', { className: "card-title".trim() }, "Post Title"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('p', { className: "card-text".trim() }, "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.\n                Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!\n            "), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "btn btn-primary".trim() }, "\n                Read More →\n            ")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-footer text-muted".trim() }, "\n            Posted on January 1, 2017 by\n            ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Start Bootstrap"))), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "pagination justify-content-center mb-4".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', { className: "page-item".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "page-link".trim() }, "\n                ← Older\n            ")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', { className: "page-item disabled".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "page-link".trim() }, "\n                Newer →\n            "))));
+}
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
+
+
+
+
+
+
+
+const _Vue = null;
+/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
+  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Posts extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
+});
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Search = function (_Component) {
+  _inherits(Search, _Component);
+
+  function Search() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Search);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Search.__proto__ || Object.getPrototypeOf(Search)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      isSearch: false,
+      count: 0
+    }, _this.searchHandler = function (event) {
+      var search = event.target.value;
+
+      if (search != '') {
+        _this.setState({ isSearch: true });
+
+        setTimeout(function () {
+          _this.setState({ isSearch: false });
+        }, 1000);
+      }
+    }, _this.increment = function () {
+      _this.setState(function (prevState) {
+        return {
+          count: prevState.count + 1
+        };
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Search, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'card my-4' },
+        _react2.default.createElement(
+          'h5',
+          { className: 'card-header' },
+          'Search'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'card-body' },
+          _react2.default.createElement(
+            'div',
+            { className: 'input-group' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              className: 'form-control',
+              placeholder: 'Search for...',
+              onKeyUp: this.searchHandler
+            }),
+            _react2.default.createElement(
+              'span',
+              { className: 'input-group-btn' },
+              _react2.default.createElement(
+                'button',
+                {
+                  className: 'btn btn-secondary',
+                  type: 'button',
+                  onClick: this.increment
+                },
+                'Go!'
+              )
+            )
+          ),
+          this.state.isSearch && _react2.default.createElement(
+            'div',
+            null,
+            '\u0E01\u0E33\u0E25\u0E31\u0E07\u0E04\u0E49\u0E19\u0E2B\u0E32...'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Search;
+}(_react.Component);
+
+exports.default = Search;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+var render = __webpack_require__(25);render = render.default || render;
+
+var options = __webpack_require__(26);options = options.default || options || {};
+
+var build = __webpack_require__(27);build = build.default || build;
+
+var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Category.vue"}));
+
+options.name && Object.defineProperty(Component, "name", { value: options.name });
+
+module.exports = Component;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = render;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+
+
+
+function render(vm) {
+      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
+                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
+            }, className: ("card my-4" + ' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h5', { className: "card-header".trim() }, "Categories"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "row".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "col-lg-6".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "list-unstyled mb-0".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Web Design")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "HTML")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Freebies")))), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "col-lg-6".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "list-unstyled mb-0".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "JavaScript")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "CSS")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Tutorials")))))));
+}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
+
+
+
+
+
+
+
+const _Vue = null;
+/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
+  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Category extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
+});
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+var render = __webpack_require__(29);render = render.default || render;
+
+var options = __webpack_require__(30);options = options.default || options || {};
+
+var build = __webpack_require__(31);build = build.default || build;
 
 var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Sponser.vue"}));
 
@@ -662,13 +933,13 @@ options.name && Object.defineProperty(Component, "name", { value: options.name }
 module.exports = Component;
 
 /***/ }),
-/* 18 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["default"] = render;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
@@ -682,7 +953,7 @@ function render(vm) {
 }
 
 /***/ }),
-/* 19 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -690,18 +961,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 20 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
 
 
@@ -717,19 +988,7 @@ const _Vue = null;
 });
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-vue");
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports) {
-
-module.exports = require("prop-types");
-
-/***/ }),
-/* 23 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -756,7 +1015,7 @@ var Login = function Login() {
 exports.default = { component: Login };
 
 /***/ }),
-/* 24 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -783,7 +1042,7 @@ var About = function About() {
 exports.default = { component: About };
 
 /***/ }),
-/* 25 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -810,7 +1069,7 @@ var Service = function Service() {
 exports.default = { component: Service };
 
 /***/ }),
-/* 26 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -837,7 +1096,7 @@ var Contact = function Contact() {
 exports.default = { component: Contact };
 
 /***/ }),
-/* 27 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -847,13 +1106,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(7);
+var _redux = __webpack_require__(9);
 
-var _reducers = __webpack_require__(28);
+var _reducers = __webpack_require__(37);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-var _reduxThunk = __webpack_require__(30);
+var _reduxThunk = __webpack_require__(39);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
@@ -866,7 +1125,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 28 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -876,9 +1135,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(7);
+var _redux = __webpack_require__(9);
 
-var _userReducer = __webpack_require__(29);
+var _userReducer = __webpack_require__(38);
 
 var _userReducer2 = _interopRequireDefault(_userReducer);
 
@@ -889,7 +1148,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 29 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -899,7 +1158,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _actions = __webpack_require__(5);
+var _actions = __webpack_require__(8);
 
 exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
@@ -914,229 +1173,10 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 30 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-
-var render = __webpack_require__(32);render = render.default || render;
-
-var options = __webpack_require__(33);options = options.default || options || {};
-
-var build = __webpack_require__(34);build = build.default || build;
-
-var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Category.vue"}));
-
-options.name && Object.defineProperty(Component, "name", { value: options.name });
-
-module.exports = Component;
-
-/***/ }),
-/* 32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["default"] = render;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-
-
-
-function render(vm) {
-      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
-                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
-            }, className: ("card my-4" + ' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h5', { className: "card-header".trim() }, "Categories"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "row".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "col-lg-6".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "list-unstyled mb-0".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Web Design")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "HTML")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Freebies")))), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "col-lg-6".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "list-unstyled mb-0".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "JavaScript")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "CSS")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', null, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Tutorials")))))));
-}
-
-/***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
-
-
-
-
-
-
-
-const _Vue = null;
-/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
-  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Category extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
-});
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-
-var render = __webpack_require__(36);render = render.default || render;
-
-var options = __webpack_require__(37);options = options.default || options || {};
-
-var build = __webpack_require__(38);build = build.default || build;
-
-var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Search.vue"}));
-
-options.name && Object.defineProperty(Component, "name", { value: options.name });
-
-module.exports = Component;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["default"] = render;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-
-
-
-function render(vm) {
-      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
-                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
-            }, className: ("card my-4" + ' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h5', { className: "card-header".trim() }, "Search"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "input-group".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('input', { 'type': "text", 'placeholder': "Search for...", className: "form-control".trim() }), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('span', { className: "input-group-btn".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('button', { 'type': "button", className: "btn btn-secondary".trim() }, "\n                    Go!\n                ")))));
-}
-
-/***/ }),
-/* 37 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
-
-
-
-
-
-
-
-const _Vue = null;
-/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
-  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Search extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
-});
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-
-var render = __webpack_require__(40);render = render.default || render;
-
-var options = __webpack_require__(41);options = options.default || options || {};
-
-var build = __webpack_require__(42);build = build.default || build;
-
-var Component = build(render, Object.assign({}, options, {__file: "/home/yo/workspace/github/RexVueSSR/client/components/Posts.vue"}));
-
-options.name && Object.defineProperty(Component, "name", { value: options.name });
-
-module.exports = Component;
-
-/***/ }),
-/* 40 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["default"] = render;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-
-
-
-function render(vm) {
-      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', __WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["mergeProps"].call(this, this.props.__react__vue__nativeEvents, { ref: ref => {
-                  this.setRootRef(ref);this.props['__react__vue__setRef'] && this.props['__react__vue__setRef'](ref);
-            }, className: (' ' + (this.props.className || '')).trim(), style: Object(__WEBPACK_IMPORTED_MODULE_0_react_vue_helper__["bindWebStyle"])(undefined, undefined, Object.assign({}, undefined, this.props.style)) }), Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h1', { className: "my-4".trim() }, "\n        Page Heading\n        ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('small', null, "Secondary Text")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card mb-4".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('img', { 'src': "http://placehold.it/750x300", 'alt': "Card image cap", className: "card-img-top".trim() }), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-body".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('h2', { className: "card-title".trim() }, "Post Title"), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('p', { className: "card-text".trim() }, "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.\n                Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!\n            "), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "btn btn-primary".trim() }, "\n                Read More →\n            ")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('div', { className: "card-footer text-muted".trim() }, "\n            Posted on January 1, 2017 by\n            ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#" }, "Start Bootstrap"))), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('ul', { className: "pagination justify-content-center mb-4".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', { className: "page-item".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "page-link".trim() }, "\n                ← Older\n            ")), " ", Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('li', { className: "page-item disabled".trim() }, Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])('a', { 'href': "#", className: "page-link".trim() }, "\n                Newer →\n            "))));
-}
-
-/***/ }),
-/* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 42 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_vue_helper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__);
-
-
-
-
-
-
-
-const _Vue = null;
-/* harmony default export */ __webpack_exports__["default"] = ((render, options, cssModules) => {
-  options.directives = Object.assign({}, options.directives, __WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["platformDirectives"]);
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react_vue__["observer"])(class Posts extends Object(__WEBPACK_IMPORTED_MODULE_3_react_vue_helper__["buildComponent"])(render, options, { Component: __WEBPACK_IMPORTED_MODULE_1_react__["Component"], PropTypes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a, Vue: _Vue || __WEBPACK_IMPORTED_MODULE_0_react_vue___default.a, cssModules }) {});
-});
 
 /***/ })
 /******/ ]);
