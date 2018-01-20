@@ -4,7 +4,7 @@ import { fetchUsers } from '../../client/actions'
 
 // components
 import Posts from '../components/Posts.vue'
-import Search from '../components/Search.vue'
+import Search from '../components/Search'
 import Category from '../components/Category.vue'
 import Sponser from '../components/Sponser.vue'
 

@@ -10,14 +10,17 @@
     "dev": "npm-run-all --parallel dev:*",
     "prod:build-client": "webpack --config config/webpack.client.js",
     "prod:build-server": "webpack --config config/webpack.server.js",
-    "start":
-      "npm run prod:build-client && npm run prod:build-server && node build/bundle.js"
+    "start": "npm run prod:build-client && npm run prod:build-server && node build/bundle.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/RexPress.git"
   },
-  "keywords": ["react vue express ssr", "react-vue-express-ssr", "RexVueSSR"],
+  "keywords": [
+    "react vue express ssr",
+    "react-vue-express-ssr",
+    "RexVueSSR"
+  ],
   "author": "Yuttasak Pannawat<yuttasakcom@gmail.com>",
   "license": "MIT",
   "bugs": {
